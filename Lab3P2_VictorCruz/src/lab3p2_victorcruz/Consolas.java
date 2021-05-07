@@ -70,7 +70,7 @@ controles, número de accesorios e información de la tarjeta de video*/
 
     @Override
     public String toString() {
-        return "Consolas\n" 
+        return super.toString()+ "Consolas\n" 
                 + "\nCantidad Almacenamiento: " + cant_almace 
                 + "\nCantidad Controles: " + cant_contr 
                 + "\nNumero accesorios: " + num_acc 

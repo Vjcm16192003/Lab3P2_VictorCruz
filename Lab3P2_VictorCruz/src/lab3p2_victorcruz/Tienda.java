@@ -18,7 +18,7 @@ de cajas de pago, producto más vendido y cantidad máxima de artículos que pue
 haber en la tienda
 */
 public class Tienda {
-
+    
     private String ubicacion, producto_ven;
     private int ID_unico, max_empleado, cant_cajas, max_art;
     ArrayList<Empleados> empleados = new ArrayList();
@@ -34,6 +34,12 @@ public class Tienda {
         this.max_art = max_art;
     }
 
+    public Tienda() {
+    }
+
+    
+    
+    
     public String getUbicacion() {
         return ubicacion;
     }

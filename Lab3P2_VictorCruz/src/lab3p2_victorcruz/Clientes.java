@@ -16,7 +16,7 @@ public class Clientes {
     private double sal,cant_cred;
     private int cant_comp;
     private String comp_cliente;
-    private String classs;
+    private String classs ="no tiene";
 
     public Clientes(String nom, String ape, String nacio, String direcion, double sal, double cant_cred, int cant_comp, String comp_cliente, String classs) {
         this.nom = nom;
@@ -29,6 +29,19 @@ public class Clientes {
         this.comp_cliente = comp_cliente;
         this.classs = classs;
     }
+
+    public Clientes(String nom, String ape, String nacio, String direcion, double sal, double cant_cred, int cant_comp, String comp_cliente) {
+        this.nom = nom;
+        this.ape = ape;
+        this.nacio = nacio;
+        this.direcion = direcion;
+        this.sal = sal;
+        this.cant_cred = cant_cred;
+        this.cant_comp = cant_comp;
+        this.comp_cliente = comp_cliente;
+    }
+    
+    
 
     public String getClasss() {
         return classs;

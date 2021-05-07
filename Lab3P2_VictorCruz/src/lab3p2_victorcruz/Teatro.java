@@ -50,7 +50,7 @@ soporta, información de limpieza e información sobre el lector de disco
 
     @Override
     public String toString() {
-        return "Teatro\n" 
+        return super.toString()+ "\nTeatro\n" 
                 + "\nCantidad de altavoces: " + cant_alt 
                 + "\nCantidad discos Blue Ray: " + cant_discBR 
                 + "\nInfo de Limpieza de Lector de Discos: " + info_limp;

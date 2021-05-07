@@ -71,7 +71,7 @@ no), marca, cantidad de conexiones y grosor*/
 
     @Override
     public String toString() {
-        return "Televisores\n" 
+        return super.toString()+ "\nTelevisores\n" 
                 + "\nSmart TV: " + smart 
                 + "\nMarca: " + marca 
                 + "\nTamaño de Pantalla" + tam_pan 

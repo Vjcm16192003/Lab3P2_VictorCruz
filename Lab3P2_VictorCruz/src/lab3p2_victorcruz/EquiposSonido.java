@@ -67,7 +67,7 @@ public class EquiposSonido extends Articulos {
 
     @Override
     public String toString() {
-        return "EquiposSonido\n" 
+        return super.toString()+"\nEquiposSonido\n" 
                 + "Cantidad Altavoces: " + cant_a 
                 + "\nPotencia Maxima: " + pot_m 
                 + "\nCantidad Puertos AUX: " + cant_p 
