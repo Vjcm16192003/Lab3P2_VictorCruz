@@ -27,15 +27,15 @@ public class Lab3P2_VictorCruz {
         ArrayList<Articulos> A;
         ArrayList<Clientes> Cli;
         ArrayList<Empleados> emp;
-        String r = " ";
-        while (!r.equalsIgnoreCase("No")) {
+        String respuesta_usuario = " ";
+        while (!respuesta_usuario.equalsIgnoreCase("No")) {
             System.out.println("Bienvenidos usted es un? [Admin/Supervisor/Asessor/Cliente]"
                     + "Si quiere Salir escriba NO");
-            r = sc.next();
-            if (r.equalsIgnoreCase("Admin")) {
+            respuesta_usuario = sc.next();
+            if (respuesta_usuario.equalsIgnoreCase("Admin")) {
                 System.out.println("Ingrese su Clave");
                 String cont = sc.next();
-                if (r.equalsIgnoreCase("Admin") && cont.equalsIgnoreCase("1234")) {
+                if (respuesta_usuario.equalsIgnoreCase("Admin") && cont.equalsIgnoreCase("1234")) {
                     while (op != 5) {
                         System.out.println("----MENU----\n"
                                 + "1. Agregar\n"
@@ -297,7 +297,7 @@ public class Lab3P2_VictorCruz {
                                             + "1. Listar Tiendas\n"
                                             + "2. Listar Articulos \n"
                                             + "3. Listar Empleados\n"
-                                            + "4. Listar Articulos\n"
+                                            + "4. Listar Clientes\n"
                                             + "5. Salir"
                                             + "Ingrese su opcion: ");
                                     op2 = sc.nextInt();
@@ -324,7 +324,7 @@ public class Lab3P2_VictorCruz {
                                                 System.out.println("ingrese el indice de la Tienda cual usted desea Listar un Articulo: ");
                                                 int op1 = sc.nextInt();
                                                 if (tienda.get(op1).getArticulos().isEmpty()) {
-                                                    System.out.println("No hay ninguna Marca registrada en esta corporación");
+                                                    System.out.println("No hay ningun Articulo registrada en esta Tienda");
                                                 } else {
                                                     System.out.println("Articulos: ");
                                                     for (int i = 0; i < tienda.get(op1).getArticulos().size(); i++) {
@@ -366,9 +366,9 @@ public class Lab3P2_VictorCruz {
                                                 System.out.println("ingrese el indice de la Tienda cual usted desea agregar un Cliente: ");
                                                 int op1 = sc.nextInt();
                                                 if (tienda.get(op1).getClientes().isEmpty()) {
-                                                    System.out.println("No hay ninguna Marca registrada en esta corporación");
+                                                    System.out.println("No hay ningun Cliente registrada en esta Tienda");
                                                 } else {
-                                                    System.out.println("Articulos: ");
+                                                    System.out.println("Clientes: ");
                                                     for (int i = 0; i < tienda.get(op1).getClientes().size(); i++) {
                                                         System.out.println(tienda.get(i).getClientes().get(i));
                                                     }//fin del for que recorre la lista de Marcas en Corparaciones
@@ -388,7 +388,7 @@ public class Lab3P2_VictorCruz {
                                             + "1. Eliminar Tiendas\n"
                                             + "2. Eliminar Articulos \n"
                                             + "3. Eliminar Empleados\n"
-                                            + "4. Eliminar Articulos\n"
+                                            + "4. Eliminar Clientes\n"
                                             + "5. Salir"
                                             + "Ingrese su opcion: ");
                                     op3 = sc.nextInt();
@@ -541,20 +541,18 @@ public class Lab3P2_VictorCruz {
                                                     System.out.println("Ingrese la Cantidad de Puertos USB: ");
                                                     cant_pU = sc.nextInt();
                                                    ((EquiposSonido) tienda.get(op).getArticulos().get(op2)).setCant_pU(cant_pU);
-                                                }//fin de la condicion
-
-                                          
-                                                    
-                                                    
+                                                }//fin de la condicion                                                      
                                                 }//fin del else
                                             }//fin del else       
                                             break;
                                         }//fin del caso 2
                                         case 3: {
-
+                                            
                                             break;
                                         }//fin del caso 3
                                         case 4: {
+                                            
+                                            
                                             break;
                                         }//fin del caso 4
                                         default:
@@ -570,7 +568,7 @@ public class Lab3P2_VictorCruz {
                                             + "1. Eliminar Tiendas\n"
                                             + "2. Eliminar Articulos \n"
                                             + "3. Eliminar Empleados\n"
-                                            + "4. Eliminar Articulos\n"
+                                            + "4. Eliminar Clientes\n"
                                             + "5. Salir"
                                             + "Ingrese su opcion: ");
                                     op4 = sc.nextInt();
@@ -679,7 +677,7 @@ public class Lab3P2_VictorCruz {
                     }//fin del while del menu
                 }//fin del if que valida el admin
             } else {//si no es Admin
-
+                System.out.println("Whoops!!!!");
             }
         }//fin que se sale del Login
     }//fin del Main
