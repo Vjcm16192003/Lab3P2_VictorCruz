@@ -18,13 +18,22 @@ que ha atendido, cantidad de productos que han comprado sus clientes y
 número total de créditos concedidos
     */
     private int cred_con,cant_prod;
-    ArrayList <Clientes> cli_aten = new ArrayList();
+    private String cli_aten;
 
-    public Asesor(int cred_con, int cant_prod, String nombre, String apellido, String salario, String nacionalidad) {
+    public Asesor(int cred_con, int cant_prod, String cli_aten) {
+        this.cred_con = cred_con;
+        this.cant_prod = cant_prod;
+        this.cli_aten = cli_aten;
+    }
+
+    public Asesor(int cred_con, int cant_prod, String cli_aten, String nombre, String apellido, String salario, String nacionalidad) {
         super(nombre, apellido, salario, nacionalidad);
         this.cred_con = cred_con;
         this.cant_prod = cant_prod;
+        this.cli_aten = cli_aten;
     }
+
+    
 
     public int getCred_con() {
         return cred_con;
@@ -42,13 +51,15 @@ número total de créditos concedidos
         this.cant_prod = cant_prod;
     }
 
-    public ArrayList<Clientes> getCli_aten() {
+    public String getCli_aten() {
         return cli_aten;
     }
 
-    public void setCli_aten(ArrayList<Clientes> cli_aten) {
+    public void setCli_aten(String cli_aten) {
         this.cli_aten = cli_aten;
     }
+
+   
 
     @Override
     public String toString() {
